@@ -129,7 +129,10 @@ export default class PokemonDetail extends Component {
                         {
                             pokemonEntity.abilities.map( (data)=>
                             <Kolom style={{textAlign:"center"}} md={{ span: 4}} >
-                                <p className="form-control-static">{ data.ability.name }</p>
+                                <Badge style={{fontSize:'1em', backgroundColor:'#BCB3D0', color:'black'}}>
+                                     { data.ability.name }
+                                </Badge>
+                                {/* <p className="form-control-static">{ data.ability.name }</p> */}
                             </Kolom>
                             )
                         }
@@ -139,11 +142,14 @@ export default class PokemonDetail extends Component {
                             <strong className="h5">Moves</strong>
                         </Col>
                     </Row>
-                    <Row gutter={40}>
+                    <Row gutter={40}  style={{textAlign:"center"}}>
                         {
                             pokemonEntity.moves.map( (data)=>
-                            <Kolom style={{textAlign:"center"}} xs={10} sm={8} md={6} lg={4} xl={2} >
-                                <p className="form-control-static">{ data.move.name }</p>
+                            <Kolom style={{textAlign:"center"}} xs={10} sm={8} md={6} lg={4} xl={2} className="mb-2 mt-2">
+                                <Badge style={{fontSize:'1em', backgroundColor:'#BCB3D0', color:'white'}}>
+                                     {  data.move.name }
+                                </Badge>
+                                {/* <p className="form-control-static">{ data.move.name }</p> */}
                             </Kolom>
                             )
                         }
